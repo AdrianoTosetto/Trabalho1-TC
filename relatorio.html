@@ -1,0 +1,172 @@
+<html>
+<head>
+	<title></title>
+	<meta charset="utf8">
+	 	<link type="text/css" href="estilo.css" rel="stylesheet">
+</head>
+<body>
+	<h2 class="warning">Usamos uma variante da Máquina de Turing onde é permitido o não deslocamento da fita</h2>
+	<h3 class="warning">Como mostrado no livro, essa variante é equivalente a uma Máquina de Turing, bastando apenas adicionar dois estados extras, um que move o cabeçote para a esquerda e outra para a direita, em sequência.<h3>
+	<h3>Questão 1.a</h3>
+	<h3>Ideia básica</h3>
+	<p>A ideia básica é comparar posições equivalentes das duas strings, caso encontre os caracteres sejam diferentes, rejeite</p>
+	<p>Outro dois pontos são quando: 1 - a primeira string é maior que a segunda e 2 - a segunda string é maior que a primeira.
+	Se a primeira string é maior que a segunda, o estado q1 vai detectar essa diferença e vai rejeitar. Se a segunda for maior, o estado q1 também vai detectar essa diferença e rejeitará a entrada.</p>
+	<h3>Algoritmo de alto nível</h3>
+	<p>
+	1. Se a máquina ler uma #, vá para o passo 5-final. O cabeçote da máquina está apontado para a extrema esquerda da fita, enquanto ler o símbolo x faça o cabeçote ir para a direita, se a máquina encontrar o símbolo "a", vá para o passo 2. Se encontrar um símbolo b, vá para o passo 3. Se encontrar um símbolo c, vá para o passo 4.</p>
+	<p>2.  Enquanto a máquina ler símbolos não marcados(a,b ou c), faça  o cabeçote ir para direita, quando encontrar o símbolo "#",  faça o cabeçote ir para direita enquanto encontrar símbolos marcados. Se a máquina ler b ou c, rejeite. Se a máquina encontrar uma "a",marque este "a" e mova o cabeçote para a esquerda  e enquanto ela ler símbolos  a,b,c e x, faça o cabeçote ir para a esquerda, quando encontrar o símbolo #, mova o cabeçote e continue procurando símbolos a,b e c, movendo o cabeçote sempre para a esquerda. Se a máquina encontrar um símbolo x, faça o cabeçote ir para a direita e volte para o passo 1.</p>
+	<p>3. Enquanto a máquina ler símbolos não marcados(a,b ou c), faça  o cabeçote ir para direita, quando encontrar o símbolo "#",  faça o cabeçote ir para direita e enquanto encontrar símbolos marcados. Se a máquina ler a ou c, rejeite. Se a máquina encontrar uma b,marque este b  e mova o cabeçote para a esquerda  e enquanto ela ler símbolos  a,b,c e x, faça o cabeçote ir para a esquerda, quando encontrar o símbolo #, mova o cabeçote e continue procurando símbolos a,b e c, movendo o cabeçote sempre para a esquerda. Se a máquina encontrar um símbolo x, faça o cabeçote ir para a direita e volte para o passo 1.</p>
+	<p>4. Enquanto a máquina ler símbolos não marcados(a,b ou c), faça  o cabeçote ir para direita, quando encontrar o símbolo "#",  faça o cabeçote ir para direita enquanto encontrar símbolos marcados. Se a máquina ler a ou b, rejeite. Se a máquina encontrar uma b,marque este b e mova o cabeçote para a esquerda  e enquanto ela ler símbolos  a,b,c e x, faça o cabeçote ir para a esquerda, quando encontrar o símbolo #, mova o cabeçote e continue procurando símbolos a,b e c, movendo o cabeçote sempre para a esquerda. Se a máquina encontrar um símbolo x, faça o cabeçote ir para a direita e volte para o passo 1.</p>
+	<p>5 - Final. Enquanto a máquina ler x, mova o cabeçote para a direita, caso leia o símbolo algum símbolo  que não x, rejeite. Se encontrar o símbolo em branco, aceite.</p>
+	<h3>Diagrama da máquina</h3>
+	<img src="Imagens/1a/codificacao.jpg">
+	<h3>Screenshots</h3>
+	<h4> Inputs aceitos</h4>
+	<!--<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-1.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-2.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-3.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-4.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-5.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-6.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-7.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-8.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-9.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-10.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-11.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-12.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-13.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-14.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-15.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-16.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-17.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-18.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-19.png" />
+	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-20.png" />
+
+	<h4>Inputs não aceitos</h4>
+	<img src="Imagens/1a/inputs-incorretos/primeiroInput-1.png" />
+	<img src="Imagens/1a/inputs-incorretos/primeiroInput-2.png" />
+	<img src="Imagens/1a/inputs-incorretos/primeiroInput-3.png" />
+	<img src="Imagens/1a/inputs-incorretos/primeiroInput-4.png" />
+	<img src="Imagens/1a/inputs-incorretos/primeiroInput-5.png" /> -->
+
+  <h3>Questão 2.a</h3>
+    <p>
+      Máquina de Turing Multifitas que computa a linguagem <i>L</i> =
+      {<i>ww</i> | <i>w</i> &isin; {0,1}*}
+    </p>
+
+    <h3>Algoritmo de alto nível que descreve o funcionamento da máquina:</h3>
+    <p>
+      <i>M</i> = "Com duas fitas e sobre a entrada <i>x</i> que inicialmente
+      está na fita 1:
+    </p>
+    <ol>
+      <li>Copie cada símbolo da fita 1 para a fita 2.</li>
+      <li>Encontre o meio da palavra na fita 2 e volte ao começo da fita 1. Assim cada fita tratará de uma metade da palavra.</li>
+      <li>Ao realizar o passo anterior, verifique a quantidade de
+      símbolos que a fita 1 possui. Se esse número for par, prossiga
+      para o próximo passo. Senão, <i>rejeite</i>.</li>
+      <li>Compare o símbolo que está em uma metade na fita 1 com o símbolo que
+      está na outra metade na fita 2. Se eles forem iguais, prossiga para o
+      próximo passo. Senão, <i>rejeite</i>.</li>
+      <li>Repita o último passo até não houver mais símbolos nas metades."</li>
+    </ol>
+
+    <h3>Codificação da máquina</h3>
+    <img src="Imagens/2a/codificacao.png">
+
+    <h3>Screenshots</h3>
+    <h4>Input correto: <i>1010</i></h4>
+    <img src="Imagens/2a/ic-0-00.png">
+    <img src="Imagens/2a/ic-0-01.png">
+    <img src="Imagens/2a/ic-0-02.png">
+    <img src="Imagens/2a/ic-0-03.png">
+    <img src="Imagens/2a/ic-0-04.png">
+    <img src="Imagens/2a/ic-0-05.png">
+    <img src="Imagens/2a/ic-0-06.png">
+    <img src="Imagens/2a/ic-0-07.png">
+    <img src="Imagens/2a/ic-0-08.png">
+    <img src="Imagens/2a/ic-0-09.png">
+    <img src="Imagens/2a/ic-0-10.png">
+    <img src="Imagens/2a/ic-0-11.png">
+    <img src="Imagens/2a/ic-0-12.png">
+    <img src="Imagens/2a/ic-0-13.png">
+    <img src="Imagens/2a/ic-0-14.png">
+    <h4>Input incorreto: <i>1</i></h4>
+    <img src="Imagens/2a/ii-0-00.png">
+    <img src="Imagens/2a/ii-0-01.png">
+    <img src="Imagens/2a/ii-0-02.png">
+    <img src="Imagens/2a/ii-0-03.png">
+    <img src="Imagens/2a/ii-0-04.png">
+    <img src="Imagens/2a/ii-0-05.png">
+    <img src="Imagens/2a/ii-0-06.png">
+    <h4>Input incorreto: <i>0</i></h4>
+    <img src="Imagens/2a/ii-1-00.png">
+    <img src="Imagens/2a/ii-1-01.png">
+    <img src="Imagens/2a/ii-1-02.png">
+    <img src="Imagens/2a/ii-1-03.png">
+    <img src="Imagens/2a/ii-1-04.png">
+    <img src="Imagens/2a/ii-1-05.png">
+    <img src="Imagens/2a/ii-1-06.png">
+
+	<h3>Questão 3.a</h3>
+	<p>
+		Para esse problema desenvolvemos 2 Máquinas de Turing: a principal e o bloco básico.
+		O papel do bloco básico(o qual chamamos de block1 e com label "VoltaFita") tem o papel de voltar a fita
+	</p>
+
+	<h3>Funcionamento da máquina</h3>
+	<p>A máquina funciona sempre cortando o número de 0's pela metade, seguindo essa lógica, se há um número de 0's na entrada que seja
+		uma potência de 2, então em algum momento sobrará apenas um 0 não marcado(não cortado). Quando isso ocorrer, a máquina estará em seu estado inicial com um único 0, então ela marcará o 0 e segue para o estado q2, ali entra em loop procurando por 0's marcados e 1's,
+		como não irá encontrar, ela vai achar um símbolo vazio e irá para o estado Aceite.</p>
+
+		<p>Outro caso é quando a entrada contém um número N ímpar de 0's (N diferente de 1), o qual o estado qImpar detecta, se ele não avistar
+		outro 0(i.e encontrar o símbolo em branco), então vai para o estado Rejeite.</p>
+		<p>O último caso é o número de 0's ser par e não ser uma potêcia de 2. Nesse caso a máquina irá cortando sempre metade dos 0's, em algum momento isso vai resultar em um número ímpar(como todo número é produto de uma série de números primos, se esse número é par e não é uma potência de 2, então ele não pode ser representado por um produto de números 2's, logo vai ter outro primo nesse produto, que é evidemente ímpar e,quando houver as sucessivas divisões por 2,esse número primo(diferente de 2) ficará evidenciado(exemplo: número 6 = 2 * 3, 2*3/2 = 3).Esse caso é coberto pelo anterior. </p>
+	</p>
+	<h3>Algoritmo de alto nível</h3>
+	Algoritmo de alto nível:
+	<p>1.  Fazer uma varredura da esquerda para a direita na fita, marcando um 0 não, e outro, sim.</p>
+	<p>2. Se no estágio 1, a fita continha um único 0, aceite.</p>
+	<p>3. Se no estágio 1, a fita continha mais que um único 0 e o número de 0s era ímpar, então rejeite.</p>
+	<p>4. Retorne para  a extremidade esquerda da fita
+	<p>5. Vá para o estágio 1</p>
+	<img src="imagens/3a/codificacao.jpg">
+	<h3>Blocos utilizados</h3>
+	<ul>
+		<li>Volta fita</li>
+		<img src="imagens/blocos-3a/volta-fita.jpg" />
+	</ul>
+	<h4>Input correto: <i>0</i></h4>
+	<img src="Imagens/3a/ic-0-00.png">
+	<img src="Imagens/3a/ic-0-01.png">
+	<img src="Imagens/3a/ic-0-02.png">
+	<h4>Input correto: <i>00</i></h4>
+
+
+	<h4>Input correto: <i>0000</i></h4>
+
+
+	<h4>Input correto: <i>100000000</i></h4>
+
+	<!---------------------------------------------------- Questão 3.b ---------------------------------------------------------------- -->
+	<h3>Questão 3.b</h3>
+	<h4 class="warning">Pra essa máquina o input deve seguir essa forma: #operando1#operando2#</h4>
+
+	<h3>Blocos utilizados</h3>
+	<ul>
+		<li>Procura operando</li>
+		<p>Esse bloco busca o primeiro operando quando o cabeçote está no começo da fita</p>
+		<img src="imagens/blocos-3b/procura-operando.jpg" />
+		<li>Procura onde escrever resultado</li>
+		<p>Esse bloco é usado para voltar a fita para o começo quando ela escreve o resultado paracial da fita</p>
+		<img src="imagens/blocos-3b/procura-onde-escrever-resultado.jpg" />
+		<li>Volta fita</li>
+		<p>Esse bloco é responsável de voltar o cabeçote da fita quando ela escreve o resultado na máquina</p>
+		<img src="imagens/blocos-3b/volta-fita.jpg" />
+	</ul>
+	<h3>Algoritmo de alto nível</h3>
+</body>
+</html>
