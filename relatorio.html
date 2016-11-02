@@ -7,6 +7,8 @@
 <body>
 	<h2 class="warning">Usamos uma variante da Máquina de Turing onde é permitido o não deslocamento da fita</h2>
 	<h3 class="warning">Como mostrado no livro, essa variante é equivalente a uma Máquina de Turing, bastando apenas adicionar dois estados extras, um que move o cabeçote para a esquerda e outra para a direita, em sequência.<h3>
+  <h2 class="warning">Conforme conversado por e-mail, optamos por utilizar vídeos ao invés de screenshots para apresentar os testes realizados. Os mesmos se encontram no arquivo compactado da entrega.</h2>
+
 	<h3>Questão 1.a</h3>
 	<h3>Ideia básica</h3>
 	<p>A ideia básica é comparar posições equivalentes das duas strings, caso encontre os caracteres sejam diferentes, rejeite</p>
@@ -21,35 +23,6 @@
 	<p>5 - Final. Enquanto a máquina ler x, mova o cabeçote para a direita, caso leia o símbolo algum símbolo  que não x, rejeite. Se encontrar o símbolo em branco, aceite.</p>
 	<h3>Diagrama da máquina</h3>
 	<img src="Imagens/1a/codificacao.jpg">
-	<h3>Screenshots</h3>
-	<h4> Inputs aceitos</h4>
-	<!--<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-1.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-2.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-3.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-4.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-5.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-6.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-7.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-8.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-9.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-10.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-11.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-12.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-13.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-14.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-15.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-16.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-17.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-18.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-19.png" />
-	<img src="Imagens/1a/inputs-corretos-prints/primeiroInput-20.png" />
-
-	<h4>Inputs não aceitos</h4>
-	<img src="Imagens/1a/inputs-incorretos/primeiroInput-1.png" />
-	<img src="Imagens/1a/inputs-incorretos/primeiroInput-2.png" />
-	<img src="Imagens/1a/inputs-incorretos/primeiroInput-3.png" />
-	<img src="Imagens/1a/inputs-incorretos/primeiroInput-4.png" />
-	<img src="Imagens/1a/inputs-incorretos/primeiroInput-5.png" /> -->
 
   <h3>Questão 2.a</h3>
     <p>
@@ -71,45 +44,37 @@
       <li>Compare o símbolo que está em uma metade na fita 1 com o símbolo que
       está na outra metade na fita 2. Se eles forem iguais, prossiga para o
       próximo passo. Senão, <i>rejeite</i>.</li>
-      <li>Repita o último passo até não houver mais símbolos nas metades."</li>
+      <li>Repita o último passo até não houver mais símbolos nas metades. Se não houver mais símbolos nas metades, <i>aceite</i>."</li>
     </ol>
 
     <h3>Codificação da máquina</h3>
-    <img src="Imagens/2a/codificacao.png">
+    <img src="Imagens/2a-codificacao.png">
 
-    <h3>Screenshots</h3>
-    <h4>Input correto: <i>1010</i></h4>
-    <img src="Imagens/2a/ic-0-00.png">
-    <img src="Imagens/2a/ic-0-01.png">
-    <img src="Imagens/2a/ic-0-02.png">
-    <img src="Imagens/2a/ic-0-03.png">
-    <img src="Imagens/2a/ic-0-04.png">
-    <img src="Imagens/2a/ic-0-05.png">
-    <img src="Imagens/2a/ic-0-06.png">
-    <img src="Imagens/2a/ic-0-07.png">
-    <img src="Imagens/2a/ic-0-08.png">
-    <img src="Imagens/2a/ic-0-09.png">
-    <img src="Imagens/2a/ic-0-10.png">
-    <img src="Imagens/2a/ic-0-11.png">
-    <img src="Imagens/2a/ic-0-12.png">
-    <img src="Imagens/2a/ic-0-13.png">
-    <img src="Imagens/2a/ic-0-14.png">
-    <h4>Input incorreto: <i>1</i></h4>
-    <img src="Imagens/2a/ii-0-00.png">
-    <img src="Imagens/2a/ii-0-01.png">
-    <img src="Imagens/2a/ii-0-02.png">
-    <img src="Imagens/2a/ii-0-03.png">
-    <img src="Imagens/2a/ii-0-04.png">
-    <img src="Imagens/2a/ii-0-05.png">
-    <img src="Imagens/2a/ii-0-06.png">
-    <h4>Input incorreto: <i>0</i></h4>
-    <img src="Imagens/2a/ii-1-00.png">
-    <img src="Imagens/2a/ii-1-01.png">
-    <img src="Imagens/2a/ii-1-02.png">
-    <img src="Imagens/2a/ii-1-03.png">
-    <img src="Imagens/2a/ii-1-04.png">
-    <img src="Imagens/2a/ii-1-05.png">
-    <img src="Imagens/2a/ii-1-06.png">
+  <h3>Questão 2.b</h3>
+    <p>
+      Máquina de Turing Multifitas que computa a linguagem <i>L</i> =
+      {<i>ww<sup>R</sup>w</i> | <i>w</i> &isin; {<i>a</i>,<i>b</i>}*}
+    </p>
+
+    <h3>Algoritmo de alto nível que descreve o funcionamento da máquina:</h3>
+    <p>
+      <i>M</i> = "Com duas fitas e sobre a entrada <i>x</i> que inicialmente
+      está na fita 1:
+    </p>
+    <ol>
+      <li>Copie cada símbolo da fita 1 para a fita 2.</li>
+      <li>Vá para o começo da terceira metade da palavra da fita 1 e volte ao começo da fita 2.</li>
+      <li>Ao realizar o passo anterior, verifique a quantidade de
+      símbolos que a fita 1 possui. Se esse número for múltiplo de 3, prossiga
+      para o próximo passo. Senão, <i>rejeite</i>.</li>
+      <li>Compare os símbolos (dois terços da entrada) que estão nas duas fitas enquanto houver item na fita 1. Se eles forem iguais, prossiga para o
+      próximo passo. Senão, <i>rejeite</i>.</li>
+      <li>Vá para o começo da primeira terça parte da entrada da fita 1 e no começo da terceira parte da entrada da fita 2.</li>
+      <li>Compare os símbolos que estão nas duas fitas enquanto houver item na fita 2. Se eles forem iguais, <i>aceite</i>. Senão, <i>rejeite</i>."</li>
+    </ol>
+
+    <h3>Codificação da máquina</h3>
+    <img src="Imagens/2b-codificacao.png">
 
 	<h3>Questão 3.a</h3>
 	<p>
@@ -133,25 +98,13 @@
 	<p>3. Se no estágio 1, a fita continha mais que um único 0 e o número de 0s era ímpar, então rejeite.</p>
 	<p>4. Retorne para  a extremidade esquerda da fita
 	<p>5. Vá para o estágio 1</p>
-	<img src="imagens/3a/codificacao.jpg">
+	<img src="Imagens/3a/codificacao.jpg">
 	<h3>Blocos utilizados</h3>
 	<ul>
 		<li>Volta fita</li>
-		<img src="imagens/blocos-3a/volta-fita.jpg" />
+		<img src="Imagens/blocos-3a/volta-fita.jpg" />
 	</ul>
-	<h4>Input correto: <i>0</i></h4>
-	<img src="Imagens/3a/ic-0-00.png">
-	<img src="Imagens/3a/ic-0-01.png">
-	<img src="Imagens/3a/ic-0-02.png">
-	<h4>Input correto: <i>00</i></h4>
 
-
-	<h4>Input correto: <i>0000</i></h4>
-
-
-	<h4>Input correto: <i>100000000</i></h4>
-
-	<!---------------------------------------------------- Questão 3.b ---------------------------------------------------------------- -->
 	<h3>Questão 3.b</h3>
 	<h4 class="warning">Para essa máquina o input deve seguir essa forma: #operando1#operando2#</h4>
 	<h4 class="warning">O resultado será escrito depois da último "#" e estará invertida</h4>
@@ -160,20 +113,20 @@
 	<ul>
 		<li>Procura operando</li>
 		<p>Esse bloco procura o proximo bit a ser somado</p>
-		<img src="imagens/blocos-3b/procura-operando.jpg" />
+		<img src="Imagens/blocos-3b/procura-operando.jpg" />
 		<li>Procura onde escrever resultado</li>
 		<p>Esse bloco é usado para voltar a fita para o começo quando ela escreve o resultado paracial da fita</p>
-		<img src="imagens/blocos-3b/procura-onde-escrever-resultado.jpg" />
+		<img src="Imagens/blocos-3b/procura-onde-escrever-resultado.jpg" />
 		<li>Volta fita</li>
 		<p>Esse bloco é responsável de voltar o cabeçote da fita quando ela escreve o resultado na máquina</p>
-		<img src="imagens/blocos-3b/volta-fita.jpg" />
+		<img src="Imagens/blocos-3b/volta-fita.jpg" />
 		<li>Limpa-fita</li>
 		<p>No final da computação a máquina principal terá escrito o resultado depois do último "#", essa máquina vai limpar a fita
 		e inverter o resultado. Nesse bloco há outro bloco, o inverte-fita, já que a máquina produz a soma na ordem inversa.</p>
-		<img src="imagens/blocos-3b/limpa-fita.jpg"/>
+		<img src="Imagens/blocos-3b/limpa-fita.jpg"/>
 		<li>Inverte-resultado</li>
 		<p>Esse bloco vai inverter o resultado da computação. Ele está contido no Limpa-fita.</p>
-		<img src="imagens/blocos-3b/inverte-resultado.jpg"/>
+		<img src="Imagens/blocos-3b/inverte-resultado.jpg"/>
 	</ul>
 	<h3>Algoritmo de alto nível</h3>
 	<p>1. Procure na fita o primeiro bit não marcado</p>
