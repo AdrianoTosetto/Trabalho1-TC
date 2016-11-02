@@ -98,14 +98,13 @@
 	<p>3. Se no estágio 1, a fita continha mais que um único 0 e o número de 0s era ímpar, então rejeite.</p>
 	<p>4. Retorne para  a extremidade esquerda da fita
 	<p>5. Vá para o estágio 1</p>
-	<img src="imagens/3a/codificacao.jpg">
+	<img src="Imagens/3a/codificacao.jpg">
 	<h3>Blocos utilizados</h3>
 	<ul>
 		<li>Volta fita</li>
-		<img src="imagens/blocos-3a/volta-fita.jpg" />
+		<img src="Imagens/blocos-3a/volta-fita.jpg" />
 	</ul>
 
-	<!---------------------------------------------------- Questão 3.b ---------------------------------------------------------------- -->
 	<h3>Questão 3.b</h3>
 	<h4 class="warning">Para essa máquina o input deve seguir essa forma: #operando1#operando2#</h4>
 	<h4 class="warning">O resultado será escrito depois da último "#" e estará invertida</h4>
@@ -114,20 +113,20 @@
 	<ul>
 		<li>Procura operando</li>
 		<p>Esse bloco procura o proximo bit a ser somado</p>
-		<img src="imagens/blocos-3b/procura-operando.jpg" />
+		<img src="Imagens/blocos-3b/procura-operando.jpg" />
 		<li>Procura onde escrever resultado</li>
 		<p>Esse bloco é usado para voltar a fita para o começo quando ela escreve o resultado paracial da fita</p>
-		<img src="imagens/blocos-3b/procura-onde-escrever-resultado.jpg" />
+		<img src="Imagens/blocos-3b/procura-onde-escrever-resultado.jpg" />
 		<li>Volta fita</li>
 		<p>Esse bloco é responsável de voltar o cabeçote da fita quando ela escreve o resultado na máquina</p>
-		<img src="imagens/blocos-3b/volta-fita.jpg" />
+		<img src="Imagens/blocos-3b/volta-fita.jpg" />
 		<li>Limpa-fita</li>
 		<p>No final da computação a máquina principal terá escrito o resultado depois do último "#", essa máquina vai limpar a fita
 		e inverter o resultado. Nesse bloco há outro bloco, o inverte-fita, já que a máquina produz a soma na ordem inversa.</p>
-		<img src="imagens/blocos-3b/limpa-fita.jpg"/>
+		<img src="Imagens/blocos-3b/limpa-fita.jpg"/>
 		<li>Inverte-resultado</li>
 		<p>Esse bloco vai inverter o resultado da computação. Ele está contido no Limpa-fita.</p>
-		<img src="imagens/blocos-3b/inverte-resultado.jpg"/>
+		<img src="Imagens/blocos-3b/inverte-resultado.jpg"/>
 	</ul>
 	<h3>Algoritmo de alto nível</h3>
 	<p>1. Procure na fita o primeiro bit não marcado</p>
