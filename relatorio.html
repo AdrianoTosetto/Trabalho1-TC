@@ -24,6 +24,27 @@
 	<h3>Diagrama da máquina</h3>
 	<img src="Imagens/1a/codificacao.jpg">
 
+ <h3>Questão 1.b</h3>
+  <p>
+    Máquina de Turing com fita única que computa a linguagem <i>L</i> =
+    {<i>#x<sub>1</sub>#x<sub>2</sub>#</i>...<i>#x<sub>n</sub></i> | <i>x<sub>i</sub></i> &isin; {0,1}* e <i>x<sub>i</sub></i> &ne; <i>x<sub>j</sub></i> para cada <i>i</i> &ne; <i>j</i>}
+  </p>
+
+  <h3>Algoritmo de alto nível que descreve o funcionamento da máquina:</h3>
+  <p>
+    <i>M</i> = "Sobre a entrada <i>x</i>:
+  </p>
+  <ol>
+    <li>Se a entrada for vazia, <i>aceite</i>. Se o primeiro símbolo for um #, marque ele e prossiga para o próximo passo. Senão, <i>rejeite</i>.</li>
+    <li>Procure o próximo # e o marque. Se nenhum # for encontrado, <i>aceite</i>.</li>
+    <li>Através de um zigue-zague compare as duas cadeias à direita dos #s encontrados anteriormente. Se elas forem diferentes, prossiga para o próximo passo. Senão, <i>rejeite</i>.</li>
+    <li>Mova a marca mais à direita das duas para o próximo símbolo # à direita e vá para o próximo passo. Se nenhum símbolo # for encontrado antes de um símbolo em branco, mova a marca mais à esquerda para o próximo # à sua direita, a marca mais à direita para o # depois desse e vá para o próximo passo. Se nenhum # estiver disponível para a marca mais à direita, todas as cadeias foram comparadas, <i>aceite</i>.</li>
+    <li>Prossiga para o passo 3."</li>
+  </ol>
+
+  <h3>Codificação da máquina</h3>
+  <img src="Imagens/1b-codificacao.png">
+
   <h3>Questão 2.a</h3>
     <p>
       Máquina de Turing Multifitas que computa a linguagem <i>L</i> =
