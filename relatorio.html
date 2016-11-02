@@ -153,12 +153,13 @@
 
 	<!---------------------------------------------------- Questão 3.b ---------------------------------------------------------------- -->
 	<h3>Questão 3.b</h3>
-	<h4 class="warning">Pra essa máquina o input deve seguir essa forma: #operando1#operando2#</h4>
+	<h4 class="warning">Para essa máquina o input deve seguir essa forma: #operando1#operando2#</h4>
+	<h4 class="warning">O resultado será escrito depois da último "#" e estará invertida</h4>
 
 	<h3>Blocos utilizados</h3>
 	<ul>
 		<li>Procura operando</li>
-		<p>Esse bloco busca o primeiro operando quando o cabeçote está no começo da fita</p>
+		<p>Esse bloco procura o proximo bit a ser somado</p>
 		<img src="imagens/blocos-3b/procura-operando.jpg" />
 		<li>Procura onde escrever resultado</li>
 		<p>Esse bloco é usado para voltar a fita para o começo quando ela escreve o resultado paracial da fita</p>
@@ -166,7 +167,24 @@
 		<li>Volta fita</li>
 		<p>Esse bloco é responsável de voltar o cabeçote da fita quando ela escreve o resultado na máquina</p>
 		<img src="imagens/blocos-3b/volta-fita.jpg" />
+		<li>Limpa-fita</li>
+		<p>No final da computação a máquina principal terá escrito o resultado depois do último "#", essa máquina vai limpar a fita
+		e inverter o resultado. Nesse bloco há outro bloco, o inverte-fita, já que a máquina produz a soma na ordem inversa.</p>
+		<img src="imagens/blocos-3b/limpa-fita.jpg"/>
+		<li>Inverte-resultado</li>
+		<p>Esse bloco vai inverter o resultado da computação. Ele está contido no Limpa-fita.</p>
+		<img src="imagens/blocos-3b/inverte-resultado.jpg"/>
 	</ul>
 	<h3>Algoritmo de alto nível</h3>
+	<p>1. Procure na fita o primeiro bit não marcado</p>
+	<p>2. Procure pela próxima #, então procure pelo próximo bit não marcado</p>
+	<p>3. Procure pela próxima #, então procure pelo próximo símbolo em branco</p>
+	<p>4. Caso os bits lidos sejam 0 e 0, escreva 0, volte para o começo da fita. Caso sejam 0 e 1, escreva 1, volte para o começo da fita. Caso sejam 1 e 0, escreva 1, volte para o começo da fita. Caso sejam 1 e 1 vá para o passo 5.</p>
+	<p>5. Escreva 0 no resultado, volte para o começo da fita. Vá para o passo 6.</p>
+	<p>6. Procure na fita o primeiro bit não marcado</p>
+	<p>7. Procure pela próxima #, então procure pelo próximo bit não marcado</p>
+	<p>8. Procure pela próxima #, então procure pelo próximo símbolo em branco</p>
+	<p>9. Caso os bits lidos sejam 0 e 0, escreva 1, volte para o começo da fita, vá para o passo 1. Caso sejam 0 e 1, escreva 0, volte para o começo da fita, vá para o passo 6. Caso sejam 1 e 0, escreva 0, volte para o começo da fita, vá para o passo 6. Caso sejam 1 e 1, escreva 1 e  vá para o passo 6.</p>
+
 </body>
 </html>
